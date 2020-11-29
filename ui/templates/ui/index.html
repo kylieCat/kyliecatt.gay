@@ -2,45 +2,25 @@
 {% load i18n %}
 {% block content %}
   <div class="container">
-    <div class="media mt-5">
-      <img src="https://d1fdloi71mui9q.cloudfront.net/OV4KHiqkSOy6QuOVBfiY_9RV44n6ziKsU4F62" class="m-3 rounded-circle"
-           alt="image" width="75px" height="75px">
-      <a class="github-button" href="https://github.com/kyliecat"
-         data-color-scheme="no-preference: dark; light: light; dark: dark;" aria-label="Follow @kyliecat on GitHub"></a>
-      <div class="media-body m-2">
-        <h5 class="align-items-center mt-2">kylieCatt</h5>
-      </div>
-    </div>
+    <h5 class="align-items-center mt-2">kylieCatt</h5>
     <div class="mt-4">
       {% for link in links %}
-        <a href="{{ link.target }}" class="btn btn-outline-dark btn-block" role="button" target="_blank"><i
+        <a href="{{ link.url }}" class="btn btn-outline-dark btn-block" role="button" target="_blank"><i
             class="fab fa-github">&nbsp;</i>{{ link.title }}</a>
         <br>
       {% endfor %}
     </div>
-    <div>
-      <div>
-
-      </div>
-      <div>
-        <iframe
-            src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23616161&amp;ctz=America%2FLos_Angeles&amp;src=c2VhdHRsZWJsbWNhbGVuZGFyQGdtYWlsLmNvbQ&amp;color=%238E24AA&amp;mode=WEEK&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showDate=0&amp;title"
-            style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
     <div class="footer mt-5">
       <hr/>
-      <h6>Made With <span class="love">♥</span> in (Your City), (Your Country)</h6>
-      <h6>
-        Proudly Hosted By
-        <a href="/" class="name" target="_blank"> (Your Name) </a>
-        <a id="email" href="mailto:Your Mail"> <i class="fa fa-envelope"> </i> </a>
-      </h6>
+      <h6>Made With <span class="love">🏴</span> in Seattle, Occupied Duwamish Territory</h6>
     </div>
   </div>
 {% endblock %}
 {% block sidebar %}
-  <a class="twitter-timeline" data-width="250" data-dnt="true" data-theme="dark"
+  <iframe
+            src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23f542c8&amp;ctz=America%2FLos_Angeles&amp;src=c2VhdHRsZWJsbWNhbGVuZGFyQGdtYWlsLmNvbQ&amp;color=%238E24AA&amp;mode=AGENDA&amp;showTitle=1&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;title=Email%20events%20to%20seattleblmcalendar%40gmail.com"
+            style="border-width:0" width="{{ sidebar.width }}" height="350" frameborder="0" scrolling="no"></iframe>
+  <a class="twitter-timeline" data-width="{{ sidebar.width }}" data-height="500" data-dnt="true" data-theme="dark"
      href="https://twitter.com/kyliecattchan/lists/acab-64365?ref_src=twsrc%5Etfw">A Twitter List by kyliecattchan</a>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {% endblock %}

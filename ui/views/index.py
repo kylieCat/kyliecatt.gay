@@ -8,6 +8,9 @@ class IndexView(View):
     def get(self, request):
         context = {
             "user": request.user,
-            "links": linkbush.get_user_links(request.user.pk)
+            "links": linkbush.get_user_links(request.user.pk),
+            "sidebar": {
+                "width": "350px"
+            }
         }
         return render(request, template_name="ui/index.html", context=context)
