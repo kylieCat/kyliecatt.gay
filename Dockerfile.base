@@ -1,0 +1,7 @@
+FROM python:3.6
+MAINTAINER kylie catt <me@kyliecatt.gay>
+
+RUN mkdir /kyliecatt.gay
+COPY requirements.txt /kyliecatt.gay/requirements.txt
+RUN python3 -m venv venv && \ 
+    /venv/bin/pip install -r /kyliecatt.gay/requirements.txt
