@@ -21,7 +21,6 @@ class Common(Configuration):
         "django.contrib.sessions",
         "django.contrib.messages",
         "django.contrib.staticfiles",
-        "material",
         "user.apps.UserConfig",
         "linkbush.apps.LinkbushConfig",
         "ui.apps.UIConfig",
