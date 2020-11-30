@@ -1,6 +1,6 @@
 import os
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kyliecatt.gay.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'kyliecatt.settings')
 os.environ.setdefault('DJANGO_CONFIGURATION', 'Dev')
 
 from configurations.wsgi import get_wsgi_application
