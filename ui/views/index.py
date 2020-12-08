@@ -2,13 +2,15 @@ from django.shortcuts import render
 from django.views import View
 
 from linkbush import linkbush
+from user.models.user import Kylie
 
 
 class IndexView(View):
     def get(self, request):
+        kylie = Kylie()
         context = {
-            "user": request.user,
-            "links": linkbush.get_user_links(request.user.pk),
+            "user": kylie,
+            "links": linkbush.get_user_links(kylie.pk),
             "sidebar": {
                 "width": "350px"
             }

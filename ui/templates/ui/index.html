@@ -3,10 +3,15 @@
 {% block content %}
   <div class="container">
     <h5 class="align-items-center mt-2">kylieCatt</h5>
+    <ul class="list-group list-group-horizontal" style="list-style: none">
+      <li><a href="https://www.instagram.com/kyliemichaela3/"><i class="fab fa-github">&nbsp;</i></a></li>
+      <li><a href="https://twitter.com/thekylie_show"><i class="fab fa-twitter">&nbsp;</i></a></li>
+      <li><a href="https://www.instagram.com/kyliemichaela3/"><i class="fab fa-instagram">&nbsp;</i></a></li>
+    </ul>
     <div class="mt-4">
       {% for link in links %}
-        <a href="{{ link.url }}" class="btn btn-outline-dark btn-block" role="button" target="_blank"><i
-            class="fab fa-github">&nbsp;</i>{{ link.title }}</a>
+        <a href="{{ link.url }}" class="btn btn-outline-dark btn-block" role="button"
+           target="_blank">{{ link.title }}</a>
         <br>
       {% endfor %}
     </div>
@@ -18,8 +23,8 @@
 {% endblock %}
 {% block sidebar %}
   <iframe
-            src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23f542c8&amp;ctz=America%2FLos_Angeles&amp;src=c2VhdHRsZWJsbWNhbGVuZGFyQGdtYWlsLmNvbQ&amp;color=%238E24AA&amp;mode=AGENDA&amp;showTitle=1&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;title=Email%20events%20to%20seattleblmcalendar%40gmail.com"
-            style="border-width:0" width="{{ sidebar.width }}" height="350" frameborder="0" scrolling="no"></iframe>
+      src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23f542c8&amp;ctz=America%2FLos_Angeles&amp;src=c2VhdHRsZWJsbWNhbGVuZGFyQGdtYWlsLmNvbQ&amp;color=%238E24AA&amp;mode=AGENDA&amp;showTitle=1&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;title=Email%20events%20to%20seattleblmcalendar%40gmail.com"
+      style="border-width:0" width="{{ sidebar.width }}" height="350" frameborder="0" scrolling="no"></iframe>
   <a class="twitter-timeline" data-width="{{ sidebar.width }}" data-height="500" data-dnt="true" data-theme="dark"
      href="https://twitter.com/kyliecattchan/lists/acab-64365?ref_src=twsrc%5Etfw">A Twitter List by kyliecattchan</a>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
