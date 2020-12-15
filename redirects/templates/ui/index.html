@@ -1,0 +1,44 @@
+{% extends "ui/base.html" %}
+{% load i18n %}
+{% block content %}
+  <div class="container">
+    <h5 class="align-items-center mt-2">kylieCatt</h5>
+    <ul class="list-group list-group-horizontal" style="list-style: none">
+      <li><a href="https://www.instagram.com/kyliemichaela3/"><i class="fab fa-github">&nbsp;</i></a></li>
+      <li><a href="https://twitter.com/kyliecattchan"><i class="fab fa-twitter">&nbsp;</i></a></li>
+      <li><a href="https://www.instagram.com/kyliemichaela3/"><i class="fab fa-instagram">&nbsp;</i></a></li>
+    </ul>
+    <div class="mt-4">
+      {% for link in links %}
+        <a href="{{ link.url }}" class="btn btn-outline-dark btn-block" role="button"
+           target="_blank">{{ link.title }}</a>
+        <br>
+      {% endfor %}
+    </div>
+    <div class="footer mt-5">
+      <hr/>
+      <h6>Made With
+        <span class="love">
+          <svg class="ironfront" height='25px' width='25px' fill="#000000" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 600 600"
+               style="enable-background:new 0 0 600 600;" xml:space="preserve">
+            <path
+                d="M300,564.1c-70.5,0-136.9-27.5-186.7-77.4C63.4,436.9,35.9,370.5,35.9,300c0-70.5,27.5-136.9,77.4-186.7  C163.1,63.4,229.5,35.9,300,35.9c70.5,0,136.9,27.5,186.7,77.4c49.9,49.9,77.4,116.2,77.4,186.7c0,70.5-27.5,136.9-77.4,186.7  S370.5,564.1,300,564.1z M300,75.9C176.4,75.9,75.9,176.4,75.9,300S176.4,524.1,300,524.1S524.1,423.6,524.1,300  S423.6,75.9,300,75.9z">
+            </path>
+            <polygon
+                points="491.6,276.1 463.4,247.9 308.9,402.2 288.6,381.9 288.6,381.9 267.5,360.8 421.8,206.4 393.6,178.2 239.2,332.5   218.1,311.4 218.1,311.4 197.8,291.1 352.1,136.6 323.9,108.4 169.5,262.8 148.3,241.7 122.5,338 217.8,312.5 192.3,407.7   287.5,382.2 262,477.5 358.3,451.7 337.2,430.5 ">
+            </polygon>
+          </svg>
+        </span> in Occupied Duwamish Territory
+      </h6>
+    </div>
+  </div>
+{% endblock %}
+{% block sidebar %}
+  <iframe
+      src="https://calendar.google.com/calendar/embed?height=400&amp;wkst=1&amp;bgcolor=%23f542c8&amp;ctz=America%2FLos_Angeles&amp;src=c2VhdHRsZWJsbWNhbGVuZGFyQGdtYWlsLmNvbQ&amp;color=%238E24AA&amp;mode=AGENDA&amp;showTitle=1&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;title=Email%20events%20to%20seattleblmcalendar%40gmail.com"
+      style="border-width:0" width="{{ sidebar.width }}" height="350" frameborder="0" scrolling="no"></iframe>
+  <a class="twitter-timeline" data-width="{{ sidebar.width }}" data-height="500" data-dnt="true" data-theme="dark"
+     href="https://twitter.com/kyliecattchan/lists/acab-64365?ref_src=twsrc%5Etfw">is this praxis?</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endblock %}
