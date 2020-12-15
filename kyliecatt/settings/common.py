@@ -24,6 +24,7 @@ class Common(Configuration):
         "user.apps.UserConfig",
         "linkbush.apps.LinkbushConfig",
         "ui.apps.UIConfig",
+        "redirects.apps.RedirectsConfig",
     ]
 
     MIDDLEWARE = [
