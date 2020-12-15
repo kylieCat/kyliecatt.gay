@@ -10,5 +10,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("hc/", HealthCheckView.as_view(), name="health_check"),
     path("", include("ui.urls")),
+    path("", include("redirects.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
