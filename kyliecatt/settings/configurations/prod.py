@@ -5,6 +5,7 @@ from ..common import Common
 
 class Prod(Common):
     SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+    DEBUG = False
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
